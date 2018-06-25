@@ -1,10 +1,186 @@
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <title>First Page</title>
-    </head>
+<!DOCTYPE HTML>
 
-    <body>
-        <p>Hello, ttd-hachinohe</p>
-    </body>
+<html lang="ja-JP">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="東北TECH道場　八戸道場 開講！
+    Androidアプリって何だろう？
+分からない事だらけだけど、仲間と学べば怖くない。自分が使うんだったらどんなアプリが欲しい？なかったら自分で考えて作ってみよう。
+そんな自分のアプリを作ることができるコミュニティ、東北TECH道場 「八戸道場」開講します。">
+    <meta name="keywords" content="東北TECH道場,八戸,Android,アプリ,青森,工業大学,開発">
+    <script type="text/javascript" src="jquery-2.1.3.js" charset="utf-8">
+    </script>
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/support.css" type="text/css">
+    <script type="text/javascript" src="js/default.js"></script>
+    <script type="text/javascript" src="maps/api/js%3Fsensor=false"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <title>東北TECH道場　八戸道場 開講！</title>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-67424411-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+</head>
+
+<body link="#0000ff" vlink="#000080" alink="#ff8000">
+    
+    <header>
+        <div>
+            <h1><img src="img/logo.png" alt="東北TECH道場"></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#sec01">東北TECH道場とは</a></li>
+                    <li><a href="index.html#sec02">特徴</a></li>
+                    <li><a href="index.html#sec03">参加方法</a></li>
+                    <li><a href="index.html#sec04">開催会場</a></li>
+                </ul>
+            </nav>
+            <div class="toggle-btn">
+                <div class="navicon-line"></div>
+                <div class="navicon-line"></div>
+                <div class="navicon-line"></div>
+            </div><!-- /.toggle-btn -->
+        </div>
+    </header>
+    
+    <div id="wraper">
+    
+        <section class="key-visual">
+            <img src="img/copy-key-visual.png" alt="八戸道場開講！Androidアプリって何だろう？分からない事だらけだけど、仲間と学べば怖くない自分が使うんだったらどんなアプリが欲しい？なかったら自分で考えて作ってみようそんな自分のアプリを作ることができるコミュニティ、東北TECH道場 「八戸道場」開講します。">
+        </section><!-- /.key-visual -->
+        
+        <div class="container">
+            
+            <section class="about sky" id="sec01">
+                <h1>東北TECH道場とは</h1>
+                <p>
+                    Googleなどの協力を得て、2012年10月に 仙台、石巻、滝沢の3会場でスタートしました。 <br />
+                    東北の発展のために精力的に活動を行っている方たちを、テクノロジーを使ってそれらの活動を支援したり、<br />
+                    またテクノロジーを使って頑張っている開発者の皆さんを支援するためにスタートしたアプリ開発の講座です。 <br />
+                    各地のエンジニアが集まって東北各地に道場を開設。<br />
+                    これまでに、石巻、釜石、北上、盛岡、仙台、会津、いわきの7箇所で開催。<br />
+                    3ヶ月から4ヶ月を1つの期として年に数回開催しています。<br />
+                    最終回は全会場を中継でつなぎ、お互いの成果を発表します。 
+                </p>
+                <div class="btn-lg">
+                    お問い合わせ先
+                </div><!-- /.btn-lg -->
+                <div class="ac">
+                    <a class="icon-email" href="mailto:hachinohe@tohokutechdojo.org" target="_blank">hachinohe@tohokutechdojo.org</a><br />
+                    <a class="icon-web" href="http://www.tohokutechdojo.org" target="_blank">http://www.tohokutechdojo.org</a>
+                </div><!-- /.ac -->
+            </section>
+            
+            <section class="features" id="sec02">
+                <h1>特徴</h1>
+                
+                <div class="box-3cols">
+                    <section>
+                        <div class="img-wrap"><img src="img/img_point1.png" alt="ポイント1" width="129" height="127"></div>
+                        <div class="btn-sm">POINT 1</div>
+                        <h2>初心者大歓迎</h2>
+                        <p>東北TECH道場は初心者の参加大歓迎！<br />
+                            先輩や道場主、講師が開発環境の構築からアプリの公開までサポートします。</p>
+                    </section>
+                    <section>
+                        <div class="img-wrap"><img src="img/img_point2.png" alt="ポイント2" width="127" height="128"></div>          
+                        <div class="btn-sm">POINT 2</div>
+                        <h2>各道場を繋いで開催</h2>
+                        <p>同時に開催する道場同士をビデオ会議で繋ぎ、その日の目標と成果を共有します。</p>
+                    </section>
+                    <section>
+                        <div class="img-wrap"><img src="img/img_point3.png" alt="ポイント3" width="132" height="89" class="mt30"></div>
+                        <div class="btn-sm">POINT 3</div>
+                        <h2>充実の講師陣</h2>
+                        <p>日本各地で現役で活躍している開発者が講師として貴方の開発をサポートします。</p>
+                    </section>
+                </div><!-- /.box-3cols -->
+                
+            </section>
+            
+            <section class="entry gry" id="sec03">
+                <h1>参加申込</h1>
+                <div class="d-list">
+                    <dl>
+                        <dt>開催日時</dt>
+                        <dd>2018年7月14日（土）13:00～17:00</dd><br>
+                        <!--<dt>発表会</dt>
+                        <dd>2016年12月3日（土）13:00～17:00</dd>-->
+                    </dl>
+                    <dl>
+                        <dt>場所</dt>
+                        <dd>八戸工業大学 メディアセンター</dd>
+                    </dl>
+                    <dl>
+                        <dt>持ち物</dt>
+                        <dd>開発で使用するパソコン</dd>
+                    </dl>
+                    <dl>
+                        <dt>参加費</dt>
+                        <dd>無料</dd>
+                    </dl>
+                </div><!-- /.d-list -->
+                <p class="mt20">昨年の様子は<a href="http://8nohe-tohokutechdojo.blogspot.jp/" target="_blank">こちらから</a></p>
+                <p class="mt20">参加をご希望される方は、こちらからご応募ください。<span class="tx-sm block">※参加者が5名に満たない場合開催を見送り場合があります。</span></p>
+                <div class="btn-lg"><a class="icon-window" href="https://goo.gl/forms/syozWcEPaa" target="_blank">参加する！</a></div>
+                <div class="img-wrap"><img src="img/txt-support.png" alt="サポート、見学大歓迎！" /></div>
+                <p class="tx-bold mt20">カッコいい姿を見せるのは社会人としての役割です。<br />
+                    特にエンジニアの方には若い世代のサポート参加をお願い致します。</p>
+            </section>
+            
+            <section class="venue" id="sec04">
+                <h1>開催会場</h1>
+                <p class="tx-bold mt20 ac">八戸工業大学　メディアセンター</p>
+                <p class="ac">〒031-8501 青森県八戸市妙字大開88-1</p>
+            </section>
+            
+        </div><!-- /.container -->
+        
+        <section id="map"></section>
+        <div class="container">
+            <section class="p10">
+                <div class="btn-lg"><a class="icon-window" href="https://www.google.co.jp/maps/place/%E5%85%AB%E6%88%B8%E5%B7%A5%E6%A5%AD%E5%A4%A7%E5%AD%A6/@40.479004,141.5598803,13z/data=!4m2!3m1!1s0x5f9b52b6e9a36b85:0x23d244db55140e0c!6m1!1e1" target="_blank">GoogleMapで開く</a></div>
+            </section>
+            
+            <div class="tx-lg">共催：青森県（新時代ITビジネス研究会）</div>
+            
+        </div><!-- /.container -->
+    
+    <footer>
+        
+        <div>
+            <h2>お問い合わせ</h2>
+            <p>
+                株式会社アイティコワーク
+            </p>
+            <p>http://www.itcowork.co.jp　TEL/FAX 0178-38-9431<br />
+担当:岡本　<a href="mailto:okamoto@itcowork.co.jp" target="_blank">okamoto@itcowork.co.jp</a></p>
+        </div>
+    </footer>
+    
+    <a class="pagetop"><img src="img/pagetop.png" alt="ページトップ" /></a><!-- /.pagetop -->
+    
+    </div><!-- /#wraper -->
+    
+    <div class="drawr">
+        <div class="drawr-header"><a href="index.html#" class="toggle-btn-close"><img src="img/btn_close.png" alt="閉じる" width="41" height="41"></a></div>
+        <ul id="menu">
+            <li><a href="index.html#sec01">東北TECH道場とは</a></li>
+            <li><a href="index.html#sec02">特徴</a></li>
+            <li><a href="index.html#sec03">参加方法</a></li>
+            <li><a href="index.html#sec04">開催会場</a></li>
+        </ul>
+        <div class="btn-lg">
+            <a href="mailto:hachinohe@tohokutechdojo.org" target="_blank">お問い合わせ</a>
+            </div><!-- /.btn-lg -->
+        </div>
+        
+</body>
 </html>
