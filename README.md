@@ -1,0 +1,1 @@
+# hachinohe.tohokutechdojo.org
