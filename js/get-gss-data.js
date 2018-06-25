@@ -1,6 +1,8 @@
 function getGSSData() {
 
-    var gss_url = 'https://spreadsheets.google.com/feeds/cells/1hTQCQs5Bq47czk9qXjvaqotl4IVjOGqWFYllke66O8Y/1/public/values'
+    var protocol = location.href.split(':')[0] == 'https' ? 'https' : 'http'
+
+    var gss_url = protocol + '://spreadsheets.google.com/feeds/cells/1hTQCQs5Bq47czk9qXjvaqotl4IVjOGqWFYllke66O8Y/1/public/values'
 
     // var gss_data_num = 0;
     // var gss_row_num = 0;
