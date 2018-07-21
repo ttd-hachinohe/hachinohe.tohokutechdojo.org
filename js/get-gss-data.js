@@ -7,7 +7,7 @@ function getGSSData() {
     // var gss_data_num = 0;
     // var gss_row_num = 0;
     // var gss_col_num = 0;
-    var gss_data = new Array();
+    var gss_data = new Array()
 
     var get_gss_json = getGSSData(gss_url)
 
