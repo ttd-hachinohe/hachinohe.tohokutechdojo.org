@@ -9,46 +9,47 @@
 分からない事だらけだけど、仲間と学べば怖くない。自分が使うんだったらどんなアプリが欲しい？なかったら自分で考えて作ってみよう。
 そんな自分のアプリを作ることができるコミュニティ、東北TECH道場 「八戸道場」開講します。">
     <meta name="keywords" content="東北TECH道場,八戸,Android,アプリ,青森,工業大学,開発">
-    <!-- <script type="text/javascript" src="jquery-2.1.3.js" charset="utf-8"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    </script>
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/support.css" type="text/css">
+    <!-- Added fontawesome by Sukekawa at 2018/07/21 -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- Added link-tag by Sukekawa at 2018/07/23 -->
+    <link rel="icon" type="image/x-icon" href="">
     <script type="text/javascript" src="js/default.js"></script>
-    <script type="text/javascript" src="maps/api/js%3Fsensor=false"></script>
+    <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript" src="js/map.js"></script>
+    <!-- Added get-gss-data.js by Sukekawa at 2018/07/21 -->
     <script type="text/JavaScript" src="js/get-gss-data.js"></script>
     <title>東北TECH道場　八戸道場 開講！</title>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        // Code formatting by Sukekawa at 2018/07/21
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-67424411-1', 'auto');
-      ga('send', 'pageview');
+        ga('create', 'UA-67424411-1', 'auto');
+        ga('send', 'pageview');
 
-      // Google Spreadsheet からデータ取得 html 書き換え
-      getGSSData().then((result) => {
+        // Added Code of DOM by Sukekawa at 2018/07/21
+        // Google Spreadsheet からデータ取得 html 書き換え
+        getGSSData().then((result) => {
+            var date = result[4]['content']['$t']
+            var start_time = result[5]['content']['$t']
+            var end_time = result[6]['content']['$t']
+            var place = result[7]['content']['$t']
+            date_array = date.split('-')
+            var day_of_week = [ '日', '月', '火', '水', '木', '金', '土' ][new Date(date).getDay()]
+            date = date_array[0] + '年' + Number(date_array[1]) + '月' + Number(date_array[2]) + '日'
 
-          var date = result[4]['content']['$t']
-          var start_time = result[5]['content']['$t']
-          var end_time = result[6]['content']['$t']
-          var place = result[7]['content']['$t']
-          date_array = date.split('-')
-          var day_of_week = [ '日', '月', '火', '水', '木', '金', '土' ][new Date(date).getDay()]
-          date = date_array[0] + '年' + Number(date_array[1]) + '月' + Number(date_array[2]) + '日'
-
-          // HTML書き換え
-          document.getElementById('date')
-          document.getElementById('date').innerHTML = date + '（' + day_of_week + '）'
-          document.getElementById('time').innerHTML = start_time + '～' + end_time
-          document.getElementById('place').innerHTML = place
-
-      })
-
+            // HTML書き換え
+            document.getElementById('date')
+            document.getElementById('date').innerHTML = date + '（' + day_of_week + '）'
+            document.getElementById('time').innerHTML = start_time + '～' + end_time
+            document.getElementById('place').innerHTML = place
+        })
     </script>
 </head>
 
@@ -59,10 +60,10 @@
             <h1><img src="img/logo.png" alt="東北TECH道場"></h1>
             <nav>
                 <ul>
-                    <li><a href="index.html#sec01">東北TECH道場とは</a></li>
-                    <li><a href="index.html#sec02">特徴</a></li>
-                    <li><a href="index.html#sec03">参加方法</a></li>
-                    <li><a href="index.html#sec04">開催会場</a></li>
+                    <li><a href="#sec01">東北TECH道場とは</a></li>
+                    <li><a href="#sec02">特徴</a></li>
+                    <li><a href="#sec03">参加方法</a></li>
+                    <li><a href="#sec04">開催会場</a></li>
                 </ul>
             </nav>
             <div class="toggle-btn">
@@ -133,6 +134,7 @@
                 <div class="d-list">
                     <dl>
                         <dt>開催日時</dt>
+                        <!-- Update and added Code by Sukekawa at 2018/07/21 -->
                         <dd>
                             <span id="date"></span><span id="time">取得中... <i class="fas fa-spinner fa-spin"></i></span>
                         </dd><br>
@@ -141,6 +143,7 @@
                     </dl>
                     <dl>
                         <dt>場所</dt>
+                        <!-- Update and added Code by Sukekawa at 2018/07/21 -->
                         <dd><span id="place">取得中... <i class="fas fa-spinner fa-spin"></i></span></dd>
                     </dl>
                     <dl>
@@ -190,23 +193,26 @@
         </div>
     </footer>
 
-    <!-- <a class="pagetop"><img src="img/pagetop.png" alt="ページトップ" /></a> --><!-- /.pagetop -->
+    <!-- Coment out a-tag by Sukekawa at 2018/07/21 -->
+    <!-- <a class="pagetop"><img src="img/pagetop.png" alt="ページトップ" /></a--><!-- /.pagetop -->
 
     </div><!-- /#wraper -->
 
+    <!-- HTML formatting by Sukekawa at 2018/07/21 -->
     <div class="drawr">
-        <div class="drawr-header"><a href="index.html#" class="toggle-btn-close"><img src="img/btn_close.png" alt="閉じる" width="41" height="41"></a></div>
+        <div class="drawr-header"><a href="#" class="toggle-btn-close"><img src="img/btn_close.png" alt="閉じる" width="41" height="41"></a></div>
         <ul id="menu">
-            <li><a href="index.html#sec01">東北TECH道場とは</a></li>
-            <li><a href="index.html#sec02">特徴</a></li>
-            <li><a href="index.html#sec03">参加方法</a></li>
-            <li><a href="index.html#sec04">開催会場</a></li>
+            <li><a href="#sec01">東北TECH道場とは</a></li>
+            <li><a href="#sec02">特徴</a></li>
+            <li><a href="#sec03">参加方法</a></li>
+            <li><a href="#sec04">開催会場</a></li>
         </ul>
         <div class="btn-lg">
             <a href="mailto:hachinohe@tohokutechdojo.org" target="_blank">お問い合わせ</a>
         </div><!-- /.btn-lg -->
     </div>
 
+    <!-- Added Channel.io by Sukekawa at 2018/07/21 -->
     <!-- Channel Plugin Scripts -->
     <script>
       ;window.channelPluginSettings = {
@@ -250,8 +256,6 @@
       })();
     </script>
     <!-- End Channel Plugin -->
-
-    <a class="pagetop"><img src="img/pagetop.png" alt="ページトップ" /></a>
 
 </body>
 </html>
